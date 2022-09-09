@@ -1,5 +1,5 @@
 /*
- * Embedded_Systems_Project.c
+ * square_wave.c
  *
  * Created: 09.09.2022 08:53:30
  * Author : sigfridb

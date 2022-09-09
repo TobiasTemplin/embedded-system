@@ -1,3 +1,9 @@
+/*
+ * square_wave.h
+ */ 
+
+#pragma once
+
 // Global constants
 #define F_CPU 4915200 // CPU clock frequency
 #define BAUDRATE 9600
