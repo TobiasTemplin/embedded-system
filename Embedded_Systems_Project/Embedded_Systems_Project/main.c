@@ -25,14 +25,14 @@ int main(void)
 	UART_init();
 	printf("Hello, my friend. This is great\n");
 	unsigned int x = 65536-1;
-	printf("%u", x);
+	printf("%u\n", x);
+	x = x + 1;
+	printf("%u\n", x);
 	
-	printf("\n");
-	
-	char* message = "Hello, This is a variable.";
+	char* message = "Hello, This is a variable.\n";
 	printf(message);
 	
-	//uart_communication();
+	uart_communication();
 
 }
 
@@ -51,11 +51,13 @@ int square_wave()
 }
 
 int uart_communication(){
-	//UART_init();
+	//UART_init(); ==> Do it in the main function before using this function. We had the problem, that we initialized several times.
 	char c;
 	while(1){
 		//UART_send('d');
 		c = UART_receive();
-		printf("I received %c", c);
+		if (c != '\n') {
+			printf("I received: %c\n", c);	
+		}
 	}
 }

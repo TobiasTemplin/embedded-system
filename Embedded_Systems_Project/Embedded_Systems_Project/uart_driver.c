@@ -25,8 +25,7 @@ void UART_init(void){
 	fdevopen(&UART_send, &UART_receive);
 }
 
-unsigned char UART_receive(void){
-	
+char UART_receive(void){
 	/*
 	  Bit 7 – RXC: USART Receive Complete
 	  This flag bit is set when there is unread data in UDR. The RXC Flag can be used to generate a Receive Complete interrupt.
@@ -40,7 +39,6 @@ unsigned char UART_receive(void){
 	//.. => feedback not here. We do when we call the function.	
 	
 	//UCSR0A &= !(1 << RXC0); REMOVE?
-	
 	return UDR0;
 }
 

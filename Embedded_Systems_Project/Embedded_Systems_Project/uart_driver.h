@@ -11,5 +11,5 @@
 
 // Declare functions
 void UART_init(void);// Initializes USART communication
-unsigned char UART_receive(void);// Receives unsigned character from MCU
+char UART_receive(void);// Receives unsigned character from MCU
 void UART_send(unsigned char data);// Sends unsigned character "data" to MCU
